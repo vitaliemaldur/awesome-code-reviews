@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Awesome Code Reviews",
+  "version": "1.0.0",
+  "description": "Make your code reviews awesome with easy access to review tools.",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": [
+    "webNavigation",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://gitlab.com/*"
+    ]
+  },
+  "options_page": "options-page/index.html",
+  "action": {
+    "default_icon": {
+      "16": "icons/logo-16.png",
+      "48": "icons/logo-48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gitlab.com/*/-/merge_requests/*"
+      ],
+      "js": [
+        "content-scripts/add-extension-id.js",
+        "content-scripts/button-injector.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}

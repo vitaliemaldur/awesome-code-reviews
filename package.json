@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "daisyui": "^5.0.50",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.6.2",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.11",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:watch": "webpack --watch --mode development",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "openai": "^5.11.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "webextension-polyfill": "^0.12.0"
+  }
+}
