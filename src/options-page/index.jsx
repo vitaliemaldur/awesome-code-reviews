@@ -40,7 +40,7 @@ const App = () => {
       <h1 className="text-2xl font-bold mb-6">Configure your preferred formatting style</h1>
       <form className="w-1/2" onSubmit={handleSubmit}>
         <fieldset className="fieldset">
-          <legend className="fieldset-legend">Comment Formatting Style</legend>
+          <legend className="fieldset-legend">Define how comments should be formatted. Add as many details as possible, describe what you like, what you don't like, and what structure you prefer.</legend>
           <textarea
             name="commentStyle"
             className="textarea h-24 w-full"
@@ -50,7 +50,7 @@ const App = () => {
           ></textarea>
         </fieldset>
         <fieldset className="fieldset mt-4">
-          <legend className="fieldset-legend">API Token for OpenRouter</legend>
+          <legend className="fieldset-legend">We use OpenRouter to interface with LLMs that will format the comments according to your requirements. Please provide an API key.</legend>
           <input
             name="apiToken"
             type="text"
