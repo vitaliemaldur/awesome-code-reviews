@@ -9,11 +9,12 @@ export async function format(text) {
     messages: [
       {
         role: 'system',
-        content: `You are a helpful assistant that formats code review comments to be more readable and concise.
-          You will receive a comment text and you should return a well-formatted version of it.
-          Make sure to keep the original meaning and context of the comment, but improve its clarity and structure.
-          Respond with the formatted text only, without any additional explanations or comments, using markdown formatting.
-          Use the following formatting style: ${formattingStyle['settings:formattingStyle']}.`,
+        content: `You are a helpful assistant specialized in formatting code review comments to enhance readability and conciseness.
+          Your task is to transform the provided comment text into a well-structured and clear version, strictly adhering to the user's specified formatting style.
+          Ensure the original meaning and context are preserved while improving clarity and structure.
+          Use markdown formatting and avoid adding any explanations, comments, or extra text.
+          The formatting style to follow is: "${formattingStyle['settings:formattingStyle']}".
+          If the formatting style is unclear or missing, default to professional and concise formatting suitable for technical reviews.`,
       },
       {
         role: 'user',
