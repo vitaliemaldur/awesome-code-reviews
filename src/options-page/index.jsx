@@ -37,6 +37,7 @@ const App = () => {
 
   return (
     <main className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-2xl font-bold mb-6">Configure your preferred formatting style</h1>
       <form className="w-1/2" onSubmit={handleSubmit}>
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Comment Formatting Style</legend>
