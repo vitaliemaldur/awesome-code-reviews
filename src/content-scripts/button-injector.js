@@ -9,9 +9,14 @@ async function handleButtonClick(event) {
   }
 
   try {
-    // const formattedComment = await sendApiMessage('comments.format', textarea.value);
     const formattedComment = await sendApiMessage('comments.format', textarea.value);
     textarea.value = formattedComment;
+
+    // Trigger input and change events to ensure GitLab processes the update
+    const inputEvent = new Event('input', { bubbles: true });
+    const changeEvent = new Event('change', { bubbles: true });
+    textarea.dispatchEvent(inputEvent);
+    textarea.dispatchEvent(changeEvent);
   } catch (error) {
     console.error('Error sending message to extension:', error);
   }
